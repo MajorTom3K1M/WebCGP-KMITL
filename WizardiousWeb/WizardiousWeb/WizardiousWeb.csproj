@@ -1,0 +1,103 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>WizardiousWeb</RootNamespace>
+    <AssemblyName>WizardiousWeb</AssemblyName>
+    <DefineConstants>$(DefineConstants);BLAZORGL</DefineConstants>
+	<KniPlatform>BlazorGL</KniPlatform>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="GameObjects\ActiveZone\ActiveZoneGraphicsComponent.cs" />
+    <Compile Include="GameObjects\ActiveZone\ActiveZonePhysicsComponent.cs" />
+    <Compile Include="GameObjects\Catapult\CatapultGraphicsComponent.cs" />
+    <Compile Include="GameObjects\Catapult\CatapultPhysicsComponent.cs" />
+    <Compile Include="GameObjects\Components\Component.cs" />
+    <Compile Include="GameObjects\Components\GraphicsComponent.cs" />
+    <Compile Include="GameObjects\Components\InputComponent.cs" />
+    <Compile Include="GameObjects\Components\PhysicsComponent.cs" />
+    <Compile Include="GameObjects\Enemy\Enemy2GraphicsComponent.cs" />
+    <Compile Include="GameObjects\Enemy\EnemyAIComponent.cs" />
+    <Compile Include="GameObjects\Enemy\EnemyGraphicsComponent.cs" />
+    <Compile Include="GameObjects\Enemy\EnemyPhysicsComponent.cs" />
+    <Compile Include="GameObjects\Floor\FloorPhysicsComponent.cs" />
+    <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\Item\ItemGraphicsComponent.cs" />
+    <Compile Include="GameObjects\Item\ItemPhysicsComponent.cs" />
+    <Compile Include="GameObjects\Player\PlayerGraphicsComponent.cs" />
+    <Compile Include="GameObjects\Player\PlayerInputComponent.cs" />
+    <Compile Include="GameObjects\Player\PlayerPhysicsComponent.cs" />
+    <Compile Include="GameObjects\Shop\ShopGraphicsComponent.cs" />
+    <Compile Include="GameObjects\Shop\ShopInputComponent.cs" />
+    <Compile Include="GameObjects\Shop\ShopPhysicsComponent.cs" />
+    <Compile Include="GameObjects\Sign\SignGraphicsComponent.cs" />
+    <Compile Include="GameObjects\Sign\SignInputComponent.cs" />
+    <Compile Include="GameObjects\Sign\SignPhysicsComponent.cs" />
+    <Compile Include="GameObjects\Skill\Skill1GraphicsComponent.cs" />
+    <Compile Include="GameObjects\Skill\Skill1PhysicsComponent.cs" />
+    <Compile Include="GameObjects\TurnIndicator\TurnIndicatorGraphicsComponent.cs" />
+    <Compile Include="GameObjects\TurnIndicator\TurnIndicatorPhysicsComponent.cs" />
+    <Compile Include="GameObjects\ViewportHandler\ViewportHandlerGraphicsComponent.cs" />
+    <Compile Include="GameObjects\ViewportHandler\ViewportHandlerInputComponent.cs" />
+    <Compile Include="GameObjects\ViewportHandler\ViewportHandlerPhysicsComponent.cs" />
+    <Compile Include="GameScenes\Level01.cs" />
+    <Compile Include="GameScenes\Level02.cs" />
+    <Compile Include="GameScenes\MenuScene.cs" />
+    <Compile Include="GameScenes\SplashScreen.cs" />
+    <Compile Include="Managers\AnimationManager.cs" />
+    <Compile Include="Managers\LevelChunk.cs" />
+    <Compile Include="Managers\SceneManager.cs" />
+    <Compile Include="Models\Animation.cs" />
+    <Compile Include="Models\Camera2D.cs" />
+    <Compile Include="Models\GameScene.cs" />
+    <Compile Include="Pages\Index.razor.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="WizardiousWebGame.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nkast.Xna.Framework" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Content" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Audio" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Media" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Input" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Game" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Blazor" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Content.Pipeline.Builder" Version="3.13.9001" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.32" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.32" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.7" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <KniContentReference Include="Content\WizardiousWebContent.mgcb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Content\Images\" />
+  </ItemGroup>
+
+</Project>

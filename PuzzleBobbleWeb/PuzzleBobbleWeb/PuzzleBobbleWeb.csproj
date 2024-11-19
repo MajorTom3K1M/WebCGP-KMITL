@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>PuzzleBobbleWeb</RootNamespace>
+    <AssemblyName>PuzzleBobbleWeb</AssemblyName>
+    <DefineConstants>$(DefineConstants);BLAZORGL</DefineConstants>
+	<KniPlatform>BlazorGL</KniPlatform>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="GameObjects\BGMIndicator.cs" />
+    <Compile Include="GameObjects\Bobble.cs" />
+    <Compile Include="GameObjects\BobbleShooter.cs" />
+    <Compile Include="GameObjects\BombBobble.cs" />
+    <Compile Include="GameObjects\Button.cs" />
+    <Compile Include="GameObjects\ColorSelector.cs" />
+    <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\Indicator.cs" />
+    <Compile Include="GameObjects\LoseCollider.cs" />
+    <Compile Include="GameObjects\NormalBobble.cs" />
+    <Compile Include="GameObjects\ScoreDisplayer.cs" />
+    <Compile Include="GameObjects\Selector.cs" />
+    <Compile Include="GameObjects\SFXIndicator.cs" />
+    <Compile Include="GameObjects\SpeedSelector.cs" />
+    <Compile Include="GameObjects\Window.cs" />
+    <Compile Include="Pages\Index.razor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="PuzzleBobbleWebGame.cs" />
+    <Compile Include="Singleton.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nkast.Xna.Framework" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Content" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Audio" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Media" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Input" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Game" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Blazor" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Content.Pipeline.Builder" Version="3.13.9001" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0' ">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.32" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.32" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.7" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <KniContentReference Include="Content\PuzzleBobbleWebContent.mgcb" />
+  </ItemGroup>
+
+</Project>

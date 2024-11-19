@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  breakout:
+    build:
+      context: ./Breakout
+      dockerfile: Dockerfile
+    ports:
+      - "5002:80"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  chess:
+    build:
+      context: ./ChessWeb
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  puzzlebobble:
+    build:
+      context: ./PuzzleBobbleWeb
+      dockerfile: Dockerfile
+    ports:
+      - "5003:80"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  wizardious:
+    build:
+      context: ./WizardiousWeb
+      dockerfile: Dockerfile
+    ports:
+      - "5004:80"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  gamelauncher:
+    build:
+      context: ./GameLauncher
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+    restart: unless-stopped
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+
+networks:
+  app-network:
+    driver: bridge

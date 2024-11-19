@@ -1,0 +1,49 @@
+# Build Folders
+bin/
+obj/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Files
+.vs/
+.vscode/
+
+# NuGet Packages
+*.nupkg
+.nuget/
+packages/
+
+# Build Results
+*.dll
+*.exe
+*.pdb
+*.cache
+*.dbmdl
+
+# Logs
+*.log
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Rider
+.idea/
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
