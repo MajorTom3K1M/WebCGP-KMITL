@@ -20,7 +20,7 @@ By transforming these MonoGame projects into web-compatible applications, we pro
 
 ## Features
 
-- **Game Collection Page**: Browse a curated list of games with descriptions and thumbnails.
+- **Game Collection Page**: Browse a list of games with descriptions and thumbnails.
 - **One-Click Play**: Launch games directly from the web page without any additional downloads.
 - **Responsive Design**: Enjoy a seamless experience across various devices and screen sizes.
 - **Dockerized Setup**: Simplify development and deployment with Docker and Docker Compose.
